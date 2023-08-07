@@ -24,6 +24,7 @@ public class Calendar_03 {
                 day = 30;
             }
         }
+
         System.out.println(month + "월은 " + day + "일까지 있습니다.");
     }
 }
