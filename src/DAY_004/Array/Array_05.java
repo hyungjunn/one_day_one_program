@@ -16,6 +16,12 @@ public class Array_05 {
         for (int i = 0; i < arr.length; i++) {
             arr2[i / 3][i % 3] = arr[i];
         }
+        for (int i = 0; i <= 3; i++) {
+            for (int j = 0; j <= 2; j++) {
+                System.out.print(arr2[i][j] + "       ");
+            }
+            System.out.println();
+        }
 /**
  * i = 0 -> [0, 0]
  * i = 1 -> [0, 1]
@@ -27,15 +33,10 @@ public class Array_05 {
  * i = 7 -> [2, 1]
  * i = 8 -> [2, 2]
  * i = 9 -> [3, 0]
- * ...
+ * i = 10 -> [3, 1]
+ * i = 11 -> [3, 2]
  */
 
-        for (int i = 0; i <= 3; i++) {
-            for (int j = 0; j <= 2; j++) {
-                System.out.print(arr2[i][j] + "       ");
-            }
-            System.out.println();
-        }
         /**
          * [0, 0] -> [0]
          * [0, 1] -> [1]
