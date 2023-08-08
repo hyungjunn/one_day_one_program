@@ -22,7 +22,7 @@ public class Prompt {
                 continue;
             }
 
-            calendar.printCalendar(2023, month);
+            calendar.printCalendar(400, month);
         }
         System.out.println("Hava a nice day!");
         scanner.close();

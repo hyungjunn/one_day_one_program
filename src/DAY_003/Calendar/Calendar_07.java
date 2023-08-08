@@ -14,6 +14,17 @@ public class Calendar_07 {
         System.out.println(" SU MO TU WE TH FR SA");
         System.out.println("-----------------------");
         int maxDay = getMaxDaysOfMonth(month);
+        if (month == 2) {
+            if (year % 4 == 0 && year % 100 == 0 && year % 400 == 0) {
+                maxDay = 29;
+            } else if (year % 4 == 0 && year % 100 == 0) {
+                maxDay = 28;
+            } else if (year % 4 == 0) {
+                maxDay = 29;
+            } else {
+                maxDay = 28;
+            }
+        }
         for (int i = 1; i <= maxDay; i++) {
             System.out.printf("%3d", i);
             if (i % 7 == 0) {
