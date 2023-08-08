@@ -11,7 +11,9 @@ public class Prompt {
         Scanner scanner = new Scanner(System.in);
         Calendar_07 calendar = new Calendar_07();
         while (true) {
-            System.out.println("월을 입력하세요.");
+            System.out.println("년도를 입력하세요.");
+            int year = scanner.nextInt();
+            System.out.println("달을 입력하세요.");
             System.out.print(PROMPT);
             int month = scanner.nextInt();
             if (month < 1) {
@@ -22,7 +24,7 @@ public class Prompt {
                 continue;
             }
 
-            calendar.printCalendar(400, month);
+            calendar.printCalendar(year, month);
         }
         System.out.println("Hava a nice day!");
         scanner.close();
