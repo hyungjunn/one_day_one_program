@@ -14,8 +14,7 @@ public class ChangeCalculator {
 
     private void getChange(int money) {
         int[] coinUnit = {500, 100, 50, 10};
-
-
+        
         System.out.println("money = " + money);
 
         for (int i = 0; i < coinUnit.length; i++) {
