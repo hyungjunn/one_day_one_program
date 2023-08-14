@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class HangManGame {
     public static void main(String[] args) {
+
         System.out.println("Welcome to Hangman!");
 
         String[] arr = {"java", "kotlin", "rust", "scala"};
@@ -19,9 +20,20 @@ public class HangManGame {
             letters[i] = '_';
         }
 
+
         while (true) {
+            boolean isGameFinished = true;
             for (int i = 0; i < secret.length(); i++) {
+                if (letters[i] == '_') {
+                    isGameFinished = false;
+                }
                 System.out.print(letters[i]);
+            }
+
+            if (isGameFinished) {
+                System.out.println();
+                System.out.println("맞췄습니다!!!!");
+                break;
             }
 
             System.out.println();
