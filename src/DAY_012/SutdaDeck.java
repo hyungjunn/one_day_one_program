@@ -17,12 +17,8 @@ class SutdaDeck {
             // cards[19] = 10
             int num = i % 10 + 1;
 
-            boolean isKwang;
-            if (i == 0 || i == 2 || i == 7) {
-                isKwang = true;
-            } else {
-                isKwang = false;
-            }
+            boolean isKwang = (i < 10) && (num == 1 || num == 3 || num == 8);
+
             cards[i] = new SutdaCard(num, isKwang);
         }
     }
