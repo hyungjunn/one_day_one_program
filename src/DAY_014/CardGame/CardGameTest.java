@@ -20,4 +20,17 @@ class CardGameTest {
 
         assertTrue(rankCheck(cards) == "STRAIGHT FLUSH");
     }
+
+    @DisplayName("같은 무늬 5장")
+    @Test
+    void FlushTest() {
+        Card[] cards = {new Card("HEART", 1), // cards[0]
+                new Card("HEART", 7), // cards[1]
+                new Card("HEART", 4), // cards[2]
+                new Card("HEART", 4), // cards[3]
+                new Card("HEART", 5)  // cards[4]
+        };
+
+        assertTrue(rankCheck(cards) == "FLUSH");
+    }
 }
