@@ -46,4 +46,17 @@ class CardGameTest {
 
         assertTrue(rankCheck(cards) == "STRAIGHT");
     }
+
+    @DisplayName("같은 카드 4장")
+    @Test
+    void fourCardTest() {
+        Card[] cards = {new Card("HEART", 1), // cards[0]
+                new Card("CLOVER", 1), // cards[1]
+                new Card("DIAMOND", 1), // cards[2]
+                new Card("SPADE", 1), // cards[3]
+                new Card("HEART", 5)  // cards[4]
+        };
+
+        assertTrue(rankCheck(cards) == "FOUR CARD");
+    }
 }
