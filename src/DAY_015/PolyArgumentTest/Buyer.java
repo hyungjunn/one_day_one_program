@@ -1,12 +1,13 @@
 package DAY_015.PolyArgumentTest;
 
-import com.sun.security.jgss.GSSUtil;
 
 class Buyer {
 
     int money = 1000;
 
     int bonusPoint = 0;
+
+    int i = 0;
 
     Product[] item = new Product[10]; // 구입한 제품을 저장하기 위한 배열
 
@@ -18,6 +19,7 @@ class Buyer {
 
         money -= p.price;
         bonusPoint += p.bonusPoint;
+        item[i++] = p;
         System.out.println(p + "을/를 구입하셨습니다.");
     }
 
