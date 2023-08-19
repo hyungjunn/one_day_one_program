@@ -4,7 +4,10 @@ class Product {
     int price;
     int bonusPoint;
 
-    Product() {}
+    Product() {
+        price = 0;
+        bonusPoint = 0;
+    }
 
     Product(int price) {
         this.price = price;
