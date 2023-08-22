@@ -8,6 +8,7 @@ class StringDemo1 {
         String string2 = "Hello";
         System.out.println(string2);
 
+        // String리터럴과 String객체 비교
         if (string1 == string2) {
             System.out.println(true);
         } else {

@@ -5,6 +5,7 @@ class StringDemo3 {
         String string1 = new String("Hello");
         String string2 = new String("Hello");
 
+        // 두 String객체 비교
         if (string1 == string2) {
             System.out.println(true);
         } else {
