@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CardGameTest {
 
+
     @DisplayName("같은 무늬면서 연속 숫자")
     @Test
     void straightFlushTest() {
@@ -21,14 +22,80 @@ class CardGameTest {
         assertTrue(rankCheck(cards) == "STRAIGHT FLUSH");
     }
 
+    @DisplayName("같은 무늬면서 연속 숫자")
+    @Test
+    void straightFlushTest1() {
+        Card[] cards = {new Card("DIAMOND", 4), // cards[0]
+                new Card("DIAMOND", 5), // cards[1]
+                new Card("DIAMOND", 6), // cards[2]
+                new Card("DIAMOND", 7), // cards[3]
+                new Card("DIAMOND", 8)  // cards[4]
+        };
+
+        assertTrue(rankCheck(cards) == "STRAIGHT FLUSH");
+    }
+
+    @DisplayName("같은 무늬면서 연속 숫자")
+    @Test
+    void straightFlushTest2() {
+        Card[] cards = {new Card("CLOVER", 4), // cards[0]
+                new Card("CLOVER", 5), // cards[1]
+                new Card("CLOVER", 6), // cards[2]
+                new Card("CLOVER", 7), // cards[3]
+                new Card("CLOVER", 8)  // cards[4]
+        };
+
+        assertTrue(rankCheck(cards) == "STRAIGHT FLUSH");
+    }
+
+    @DisplayName("같은 무늬면서 연속 숫자")
+    @Test
+    void straightFlushTest3() {
+        Card[] cards = {new Card("SPADE", 4), // cards[0]
+                new Card("SPADE", 5), // cards[1]
+                new Card("SPADE", 6), // cards[2]
+                new Card("SPADE", 7), // cards[3]
+                new Card("SPADE", 8)  // cards[4]
+        };
+
+        assertTrue(rankCheck(cards) == "STRAIGHT FLUSH");
+    }
+
+
     @DisplayName("같은 무늬 5장")
     @Test
-    void flushTest() {
+    void flushTest1() {
+        Card[] cards = {new Card("SPADE", 1), // cards[0]
+                new Card("SPADE", 7), // cards[1]
+                new Card("SPADE", 4), // cards[2]
+                new Card("SPADE", 4), // cards[3]
+                new Card("SPADE", 5)  // cards[4]
+        };
+
+        assertTrue(rankCheck(cards) == "FLUSH");
+    }
+
+    @DisplayName("같은 무늬 5장")
+    @Test
+    void flushTest2() {
         Card[] cards = {new Card("HEART", 1), // cards[0]
                 new Card("HEART", 7), // cards[1]
                 new Card("HEART", 4), // cards[2]
                 new Card("HEART", 4), // cards[3]
                 new Card("HEART", 5)  // cards[4]
+        };
+
+        assertTrue(rankCheck(cards) == "FLUSH");
+    }
+
+    @DisplayName("같은 무늬 5장")
+    @Test
+    void flushTest3() {
+        Card[] cards = {new Card("CLOVER", 1), // cards[0]
+                new Card("CLOVER", 7), // cards[1]
+                new Card("CLOVER", 4), // cards[2]
+                new Card("CLOVER", 4), // cards[3]
+                new Card("CLOVER", 5)  // cards[4]
         };
 
         assertTrue(rankCheck(cards) == "FLUSH");
@@ -106,6 +173,19 @@ class CardGameTest {
                 new Card("CLOVER", 8), // cards[1]
                 new Card("DIAMOND", 3), // cards[2]
                 new Card("SPADE", 9), // cards[3]
+                new Card("HEART", 5)  // cards[4]
+        };
+
+        assertTrue(rankCheck(cards) == "NO RANK");
+    }
+
+    @DisplayName("아무것도 해당되지 않음.")
+    @Test
+    void noRankTest1() {
+        Card[] cards = {new Card("HEART", 9), // cards[0]
+                new Card("CLOVER", 7), // cards[1]
+                new Card("DIAMOND", 3), // cards[2]
+                new Card("SPADE", 1), // cards[3]
                 new Card("HEART", 5)  // cards[4]
         };
 
