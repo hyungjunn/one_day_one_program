@@ -2,7 +2,6 @@ package DAY_014.CardGame;
 
 class CardGame {
     static String rankCheck(Card[] card) {
-        String rank = "";
         int count = 0;
         int pair = 0;
 
@@ -59,9 +58,8 @@ class CardGame {
 
         if (pair == 2) {return "2 PAIR";}
         if (pair == 1) {return "1 PAIR";}
-        if (pair == 0) {return "NO RANK";}
 
-        return rank;
+        return "NO RANK";
     }
 
     public static void main(String[] args) {
