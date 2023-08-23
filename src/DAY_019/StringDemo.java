@@ -12,5 +12,6 @@ class StringDemo {
             System.out.println(false);
         }
 
+        System.out.println(string1.equals(string2));
     }
 }
