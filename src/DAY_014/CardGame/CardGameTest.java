@@ -179,31 +179,31 @@ class CardGameTest {
         assertTrue(rankCheck(cards) == "2 PAIR");
     }
 
-//    @DisplayName("같은 숫자 한쌍")
-//    @Test
-//    void onePairTest() {
-//        Card[] cards = {new Card("HEART", 1), // cards[0]
-//                new Card("CLOVER", 1), // cards[1]
-//                new Card("DIAMOND", 3), // cards[2]
-//                new Card("SPADE", 2), // cards[3]
-//                new Card("HEART", 5)  // cards[4]
-//        };
-//
-//        assertTrue(rankCheck(cards) == "1 PAIR");
-//    }
+    @DisplayName("같은 숫자 한쌍")
+    @Test
+    void onePairTest() {
+        Card[] cards = {new Card("HEART", 1), // cards[0]
+                new Card("CLOVER", 1), // cards[1]
+                new Card("DIAMOND", 3), // cards[2]
+                new Card("SPADE", 2), // cards[3]
+                new Card("HEART", 5)  // cards[4]
+        };
 
-//    @DisplayName("같은 숫자 한쌍")
-//    @Test
-//    void onePairTest1() {
-//        Card[] cards = {new Card("HEART", 2), // cards[0]
-//                new Card("CLOVER", 2), // cards[1]
-//                new Card("DIAMOND", 3), // cards[2]
-//                new Card("SPADE", 1), // cards[3]
-//                new Card("HEART", 5)  // cards[4]
-//        };
-//
-//        assertTrue(rankCheck(cards) == "1 PAIR");
-//    }
+        assertTrue(rankCheck(cards) == "1 PAIR");
+    }
+
+    @DisplayName("같은 숫자 한쌍")
+    @Test
+    void onePairTest1() {
+        Card[] cards = {new Card("HEART", 2), // cards[0]
+                new Card("CLOVER", 2), // cards[1]
+                new Card("DIAMOND", 3), // cards[2]
+                new Card("SPADE", 1), // cards[3]
+                new Card("HEART", 5)  // cards[4]
+        };
+
+        assertTrue(rankCheck(cards) == "1 PAIR");
+    }
 
     @DisplayName("아무것도 해당되지 않음.")
     @Test

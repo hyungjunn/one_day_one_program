@@ -3,6 +3,8 @@ package DAY_014.CardGame;
 class CardGame {
     static String rankCheck(Card[] card) {
         String rank = "";
+        int count = 0;
+        int pair = 0;
 
         int[] counter = new int[13]; // card[i].num가 조건에 일치하는지 알아내기 위한 카운트도구
         int[] counter2 = new int[4]; // card[i].kind가 조건에 일치하는지 알아내기 위한 카운트도구
@@ -13,6 +15,9 @@ class CardGame {
             }
         }
 
+        for (int i = 0; i < card.length; i++) {
+            counter[card[i].num]++;
+        }
         // 8. "STRAIGHT FLUSH" 같은 무늬면서 연속 숫자
         for (int i = 0; i < 4; i++) {
             if (card[i].num + 1 == card[i + 1].num && counter2[0] == 4) {
@@ -25,10 +30,6 @@ class CardGame {
             if (counter2[0] == 4) {
                 return "FLUSH";
             }
-        }
-
-        for (int i = 0; i < card.length; i++) {
-            counter[card[i].num]++;
         }
 
         for (int i = 0; i < counter.length; i++) {// 6. "STRAIGHT" 연속 숫자 5장
@@ -49,24 +50,17 @@ class CardGame {
             }// 4. "THREE CARD" 같은 카드 3장
         }
 
-        for (int i = 0; i < counter.length; i++) {
-            if (counter[counter[i]] == 2) {
-                return "2 PAIR";
-            } // 3. "2 PAIR" 같은 숫자 한쌍
-        }
-
 
         for (int i = 0; i < counter.length; i++) {
             if (counter[i] == 2) {
-                return "1 PAIR";
-            }    // 2. "1 PAIR" 같은 숫자 한쌍
+                pair++;
+            }
         }
 
-        for (int i = 0; i < counter.length; i++) {
-            if (counter[i] == 1) {
-                return "NO RANK";
-            }   // 1. "NO RANK"
-        }
+        if (pair == 2) {return "2 PAIR";}
+        if (pair == 1) {return "1 PAIR";}
+        if (pair == 0) {return "NO RANK";}
+
         return rank;
     }
 
