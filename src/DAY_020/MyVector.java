@@ -22,22 +22,22 @@ class MyVector {
     }
 
     // 객체배열에 저장된 객체의 개수를 저장하기 위한 인스턴스 변수 size를 추가하고, 이 변수의 값을 반환하는 size()
-    int size() {
+    public int size() {
         return this.size;
     }
 
     // 배열 objArr의 길이를 반환하는 capacity()
-    int capacity() {
+    public int capacity() {
         return capacity;
     }
 
     // 객체배열이 비었는지 확인하는 boolean isEmpty()
-    boolean isEmpty() {
+    public boolean isEmpty() {
         return size == 0;
     }
 
     // 객체배열 objArr에 객체를 추가하는 메서드 void add(Object obj)를 작성하시오.
-    void add(Object obj) {
+    public void add(Object obj) {
         objArr[size++] = obj;
     }
 
@@ -56,7 +56,7 @@ class MyVector {
     }
 
     // 객체 배열 objArr에서 지정된 객체가 저장되어 있는 위치(index)를 반환하는 int indexOf(Object obj)를 작성
-    int indexOf(Object obj) {
+    public int indexOf(Object obj) {
 //        if (index == null) {
 //            throw new IndexOutOfBoundsException("범위를 벗어났습니다.");
 //        }
@@ -69,8 +69,19 @@ class MyVector {
     }
 
     // 객체배열 objArr에서 지정된 객체를 삭제하는 boolean remove(Object obj)를 작성(indexof()를 이용)
-    boolean remove(Object obj) {
+    public boolean remove(Object obj) {
+        // null값을 지정 객체 자리에 넣어 삭제
         objArr[indexOf(obj)] = null;
+        // 객체의 자리가 맨끝이 아닐때
+        if (indexOf(obj) != size - 1) {
+            // 한 칸씩 옆으로 복사
+            System.arraycopy(obj, indexOf(obj), obj, indexOf(obj) - 1, size - indexOf(obj) - 1);
+        }
+        // 마지막 자리에 null
+        objArr[size-1] = null;
+        // size 1줄어든다
+        size--;
+        // true 반환
         return true;
     }
 }
