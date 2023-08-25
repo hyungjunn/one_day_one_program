@@ -76,7 +76,7 @@ class MyVector {
                 return index;
             }
         }
-        return 0;
+        return -1;
     }
 
     // 객체배열 objArr에서 지정된 객체를 삭제하는 boolean remove(Object obj)를 작성(indexof()를 이용)
