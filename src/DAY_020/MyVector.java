@@ -14,6 +14,9 @@ class MyVector {
     }
 
     public MyVector(int capacity) {
+        if (capacity < 0) {
+            throw new IllegalArgumentException("유효하지 않은 값입니다. : " + capacity);
+        }
         this.capacity = capacity;
     }
 
