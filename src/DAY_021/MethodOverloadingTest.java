@@ -17,6 +17,10 @@ public class MethodOverloadingTest {
         System.out.println(d);
     }
 
+    public void println(String s) {
+        System.out.println(s);
+    }
+
 
     public static void main(String[] args) {
         MethodOverloadingTest methodOverloadingTest = new MethodOverloadingTest();
@@ -24,5 +28,6 @@ public class MethodOverloadingTest {
         methodOverloadingTest.println(100);
         methodOverloadingTest.println(3.14f);
         methodOverloadingTest.println(3.14d);
+        methodOverloadingTest.println("Java");
     }
 }
