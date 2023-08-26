@@ -13,11 +13,16 @@ public class MethodOverloadingTest {
         System.out.println(f);
     }
 
+    public void println(double d) {
+        System.out.println(d);
+    }
+
 
     public static void main(String[] args) {
         MethodOverloadingTest methodOverloadingTest = new MethodOverloadingTest();
         methodOverloadingTest.println(true);
         methodOverloadingTest.println(100);
         methodOverloadingTest.println(3.14f);
+        methodOverloadingTest.println(3.14d);
     }
 }
