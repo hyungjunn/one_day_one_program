@@ -74,8 +74,12 @@ class MyVector {
         objArr[indexOf(obj)] = null;
         // 객체의 자리가 맨끝이 아닐때
         if (indexOf(obj) != size - 1) {
-            // 한 칸씩 옆으로 복사
-            System.arraycopy(obj, indexOf(obj), obj, indexOf(obj) - 1, size - indexOf(obj) - 1);
+            // 한 칸씩 옆으로 복사 => indexOf(obj)부터 맨끝까지 한칸씩 전체적으로 이동
+            // 이동하는 배열의 길이 => size - 1 - indexOf(obj)
+
+            //objArr[indexOf(obj)+1]에서 objArr[indexOf(obj)]로 size-1-indexOf(obj)만큼 복사
+            objArr[indexOf(obj)] = objArr[indexOf(obj) + 1];
+
         }
         // 마지막 자리에 null
         objArr[size-1] = null;
