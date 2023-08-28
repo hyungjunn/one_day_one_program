@@ -32,5 +32,10 @@ public class ArrayCopyTest {
         arr = tmp;
 
         System.out.println(Arrays.toString(arr)); // [0, 1, 2, 3, 4, 0, 0, 0, 0, 0]
+
+        // arraycopy가 효율적이다.
+        int[] arr1 = new int[arr.length * 2];
+        System.arraycopy(arr, 0, arr1, 0, arr.length);
+        System.out.println(Arrays.toString(arr1));
     }
 }
