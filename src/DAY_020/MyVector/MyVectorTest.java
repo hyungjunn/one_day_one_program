@@ -8,7 +8,15 @@ class MyVectorTest {
         myVector.add(3);
         myVector.add(4);
         myVector.add(5);
+        myVector.add("Ja");
+        myVector.add("va");
+        myVector.add("의");
+        myVector.add("정");
+        myVector.add("석");
+
         System.out.println(myVector);
         System.out.println(myVector.indexOf(1));
+        myVector.remove(3);
+        System.out.println(myVector);
     }
 }

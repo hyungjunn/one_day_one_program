@@ -75,7 +75,7 @@ class MyVector {
         // null값을 지정 객체 자리에 넣어 삭제
         objArr[indexOf(obj)] = null;
         // 객체의 자리가 맨끝이 아닐때
-        if (indexOf(obj) != size - 1) {
+        if (indexOf(obj) != size - 1 && indexOf(obj) != -1) {
             for (int i = indexOf(obj); i < size - 1; i++) {
                 objArr[i] = objArr[i + 1];
             }
