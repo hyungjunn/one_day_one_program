@@ -3,11 +3,11 @@ package DAY_020;
 import java.util.Arrays;
 
 class MyVector {
-    Object[] objArr = null;
+    private Object[] objArr;
 
-    private int capacity = 0;
+    private int capacity;
 
-    private int size = 0;
+    private int size;
 
     MyVector() {
         this(16);
@@ -52,7 +52,9 @@ class MyVector {
     // 문자열 반환 오버라이딩
     @Override
     public String toString() {
-        return "";
+        return "MyVector{" +
+                "objArr=" + Arrays.toString(objArr) +
+                '}';
     }
 
     // 객체 배열 objArr에서 지정된 객체가 저장되어 있는 위치(index)를 반환하는 int indexOf(Object obj)를 작성
@@ -74,15 +76,12 @@ class MyVector {
         objArr[indexOf(obj)] = null;
         // 객체의 자리가 맨끝이 아닐때
         if (indexOf(obj) != size - 1) {
-            // 한 칸씩 옆으로 복사 => indexOf(obj)부터 맨끝까지 한칸씩 전체적으로 이동
-            // 이동하는 배열의 길이 => size - 1 - indexOf(obj)
-
-            //objArr[indexOf(obj)+1]에서 objArr[indexOf(obj)]로 size-1-indexOf(obj)만큼 복사
-            objArr[indexOf(obj)] = objArr[indexOf(obj) + 1];
-
+            for (int i = indexOf(obj); i < size - 1; i++) {
+                objArr[i] = objArr[i + 1];
+            }
         }
         // 마지막 자리에 null
-        objArr[size-1] = null;
+        objArr[size - 1] = null;
         // size 1줄어든다
         size--;
         // true 반환
