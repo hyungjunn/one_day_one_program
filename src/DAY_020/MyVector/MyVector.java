@@ -3,7 +3,7 @@ package DAY_020.MyVector;
 import java.util.Arrays;
 
 class MyVector {
-    private Object[] objArr;
+    Object[] objArr;
 
     private int capacity;
 
@@ -36,12 +36,12 @@ class MyVector {
         return size == 0;
     }
 
-    // 객체배열 objArr에 객체를 추가하는 메서드 void add(Object obj)를 작성하시오.
+    // 객체배열 objArr에 객체를 추가하는 메서드 void add(Object obj)
     public void add(Object obj) {
         objArr[size++] = obj;
     }
 
-    // 객체 배열 objArr에 저장된 객체를 반환하는 Object get(index)를 작성
+    // 객체 배열 objArr에 저장된 객체를 반환하는 Object get(index)
     Object get(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("범위를 벗어났습니다.");
@@ -57,17 +57,17 @@ class MyVector {
                 '}';
     }
 
-    // 객체 배열 objArr에서 지정된 객체가 저장되어 있는 위치(index)를 반환하는 int indexOf(Object obj)를 작성
+    // 객체 배열 objArr에서 지정된 객체가 저장되어 있는 위치(index)를 반환하는 int indexOf(Object obj)
     public int indexOf(Object obj) {
-//        if (index == null) {
-//            throw new IndexOutOfBoundsException("범위를 벗어났습니다.");
-//        }
         for (int index = 0; index < size; index++) {
             if (obj.equals(objArr[index]) && objArr[index] != null) {
                 return index;
             }
         }
         return -1;
+//        if (index == null) {
+//            throw new IndexOutOfBoundsException("범위를 벗어났습니다.");
+//        }
     }
 
     // 객체배열 objArr에서 지정된 객체를 삭제하는 boolean remove(Object obj)를 작성(indexof()를 이용)
