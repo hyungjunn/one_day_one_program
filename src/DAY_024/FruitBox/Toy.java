@@ -1,4 +1,6 @@
 package DAY_024.FruitBox;
 
-public class Toy {
+class Toy {
+    public String toString(){
+        return "Toy";}
 }
