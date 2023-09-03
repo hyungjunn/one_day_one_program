@@ -10,6 +10,7 @@ class ScannerTest {
         String input = scanner.nextLine();
         System.out.println(input);
 
-
+        int num = Integer.parseInt(input);
+        System.out.println(num);
     }
 }
