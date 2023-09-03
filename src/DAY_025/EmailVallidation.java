@@ -2,7 +2,7 @@ package DAY_025;
 
 import java.util.Scanner;
 
-public class EmailValidation {
+public class EmailVallidation {
     public static void main(String[] args) {
         while (true) {
             System.out.print("희망하는 이메일을 입력해주세요. >>> ");
