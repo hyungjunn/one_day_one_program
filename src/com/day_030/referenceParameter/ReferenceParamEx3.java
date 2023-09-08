@@ -10,6 +10,7 @@ public class ReferenceParamEx3 {
         sortArr(arr);
     }
 
+    // 배열 출력
     static void printArr(int[] arr) {
         System.out.print("[");
 
@@ -21,6 +22,7 @@ public class ReferenceParamEx3 {
         System.out.println();
     }
 
+    // 요소들의 합 구하기
     static void sumArr(int[] arr) {
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -29,6 +31,7 @@ public class ReferenceParamEx3 {
         System.out.println(sum);
     }
 
+    // 정렬하기
     static void sortArr(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i] > arr[i + 1]) {
