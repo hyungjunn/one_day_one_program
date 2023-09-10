@@ -8,7 +8,9 @@ class Car {
 
     Car() {
         this("white", "Auto", 4);
+        System.out.println("깡통옵션");
     }
+
 
     Car(Car c) {
         this(c.color, c.gear, c.door);
