@@ -2,8 +2,8 @@ package com.hyungjunn.example.day_032.util;
 
 public class LottoMachineMain {
     public static void main(String[] args) {
-        Ball[] balls = new Ball[45];
-        for (int i = 0; i < balls.length; i++) {
+        Ball[] balls = new Ball[LottoMachine.MAX_BALL_COUNT];
+        for (int i = 0; i < LottoMachine.MAX_BALL_COUNT; i++) {
             balls[i] = new Ball(i + 1);
         }
         // LottoMachine인스턴스가 생성된다.
