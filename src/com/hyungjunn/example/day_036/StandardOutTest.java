@@ -7,5 +7,6 @@ public class StandardOutTest {
         sdo.println(3.14);
         sdo.println("Hello");
         sdo.println(true);
+
     }
 }
